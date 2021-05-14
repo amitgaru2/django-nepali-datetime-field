@@ -1,0 +1,16 @@
+**/__pycache__/**
+
+**/.pytest_cache/**
+
+**/.idea/**
+**/.vscode/**
+*.swp
+
+docs/source/_*
+
+/build
+
+/*.egg-info/
+
+dist
+example

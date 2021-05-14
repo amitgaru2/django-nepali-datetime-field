@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include nepali_datetime_field/static *
+recursive-include nepali_datetime_field/templates *

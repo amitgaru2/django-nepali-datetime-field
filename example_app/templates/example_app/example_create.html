@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Create</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+</form>
+<br/>
+<a href="{% url 'example_list' %}">List</a>
+</body>
+<script src="{% static 'nepali_datetime_field/init.js' %}"></script>
+</html>

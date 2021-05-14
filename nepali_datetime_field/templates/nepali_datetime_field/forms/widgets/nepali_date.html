@@ -1,0 +1,7 @@
+{% load nepali_datetime_field %}
+<input
+        type="{{ widget.type }}"
+        name="{{ widget.name }}"
+        {% if widget.value != None %} value="{{ widget.value|nepali_date }}" {% endif %}
+        {% include "django/forms/widgets/attrs.html" %}
+/>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+{% load nepali_datetime_field %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example List</title>
+</head>
+<body>
+<p>
+    <a href="{% url 'example_create' %}">Add more</a>
+</p>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Apply</button>
+    <button><a href="?">Clear</a></button>
+</form>
+<br/>
+<ul>
+    {% for o in object_list %}
+    <li>{{ o.nepali_date }} ( {{ o.nepali_date|nepali_date }} )
+        <a href="{% url 'example_update' o.id %}">Update</a>
+        <form method="post" action="{% url 'example_delete' o.id %}">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    <br/>
+    {% endfor %}
+</ul>
+</body>
+<script src="{% static 'nepali_datetime_field/init.js' %}"></script>
+</html>
