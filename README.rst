@@ -73,4 +73,4 @@ Quick start
 Demo
 ----
 
-Demo of ``example_app`` deployed `here <https://nepali-datetime-field.herokuapp.com/>`__.
+Demo of ``example_app`` deployed `here <https://nepali-datetime-field.herokuapp.com/example/create>`__.
