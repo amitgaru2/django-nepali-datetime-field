@@ -41,7 +41,7 @@ Quick start
         ...
         nepali_date = NepaliDateField()
 
-4. Whenever using the field in html add the `init` script to load the date picker::
+4. Whenever using the field in html add the script: ``{% static 'nepali_datetime_field/init.js' %}`` to load the date picker::
     
     <html>
     {% load static %}
