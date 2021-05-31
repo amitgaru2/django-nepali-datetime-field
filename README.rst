@@ -12,7 +12,7 @@ Installation
 ------------
 ::
 
-    $ pip install nepali-datetime-field
+    $ pip install django-nepali-datetime-field
 
 
 Quick start
