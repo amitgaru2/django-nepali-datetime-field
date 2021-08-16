@@ -18,11 +18,11 @@ Installation
 Quick start
 -----------
 
-1. Add ``nepali-datetime-field`` to your INSTALLED_APPS setting like this::
+1. Add ``nepali_datetime_field`` to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'nepali-datetime-field',
+        'nepali_datetime_field',
     ]
 
 2. Import & use ``NepaliDateField`` to your model::
