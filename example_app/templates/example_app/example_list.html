@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-{% load static %}
-{% load nepali_datetime_field %}
+{% load static %} {% load nepali_datetime_field %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Example List</title>
-</head>
-<body>
-<p>
-    <a href="{% url 'example_create' %}">Add more</a>
-</p>
-<form method="get">
-    {{ form.as_p }}
-    <button type="submit">Apply</button>
-    <button><a href="?">Clear</a></button>
-</form>
-<br/>
-<ul>
-    {% for o in object_list %}
-    <li>{{ o.nepali_date }} ( {{ o.nepali_date|nepali_date }} )
-        <a href="{% url 'example_update' o.id %}">Update</a>
-        <form method="post" action="{% url 'example_delete' o.id %}">
-            {% csrf_token %}
-            <button type="submit">Delete</button>
+  </head>
+  <body>
+    <div style="width: 60%; margin: auto">
+      <div style="border: 2px solid #000; padding: 1rem">
+        <h2>Filter ( Date range )</h2>
+        <form method="get">
+          {{ form }}
+          <button type="submit">Apply</button>
+          <button><a href="?">Clear</a></button>
         </form>
-    </li>
-    <br/>
-    {% endfor %}
-</ul>
-</body>
-<script src="{% static 'nepali_datetime_field/init.js' %}"></script>
+      </div>
+      {% if object_list %}
+      <div style="padding: 1rem">
+        <h2>Added records</h2>
+        <ul>
+          {% for o in object_list %}
+          <li>
+            {{ o.nepali_date }} ( {{ o.nepali_date|nepali_date }} )
+            <a href="{% url 'example_update' o.id %}">Update</a>
+            <form method="post" action="{% url 'example_delete' o.id %}">
+              {% csrf_token %}
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+          <br />
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <p><i>No added records found!</i></p>
+      {% endif %}
+      <h3>
+        <a href="{% url 'example_create' %}">Add new</a>
+      </h3>
+    </div>
+  </body>
+  <script src="{% static 'nepali_datetime_field/init.js' %}"></script>
 </html>

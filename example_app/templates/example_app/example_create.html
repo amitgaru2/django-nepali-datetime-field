@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Example Create</title>
-</head>
-<body>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save">
-</form>
-<br/>
-<a href="{% url 'example_list' %}">List</a>
-</body>
-<script src="{% static 'nepali_datetime_field/init.js' %}"></script>
+  </head>
+  <body>
+    <div style="width: 60%; margin: auto">
+      <h1>{% if object %}UPDATE{% else %}ADD{% endif %} new Nepali Date record</h1>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="{% if object %}UPDATE{% else %}ADD{% endif %}" />
+      </form>
+      <h3>
+        <a href="{% url 'example_list' %}">List all added</a>
+      </h3>
+    </div>
+  </body>
+  <script src="{% static 'nepali_datetime_field/init.js' %}"></script>
 </html>
