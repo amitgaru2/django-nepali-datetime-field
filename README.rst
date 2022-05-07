@@ -3,9 +3,9 @@ Nepali DateTime Field
 =====================
 
 Highly motivated package from Django's DateField & DateTimeField. The library is intended to provide
-Bikram Sambat Date Time fields for both Models and Forms.
+Bikram Sambat Date Time fields for Django's Model and Form.
 
-*Note: Currently only supports DateField. DateTimeField will be supported soon in future releases.*
+:code:`Note: Currently only supports DateField. DateTimeField will be supported soon in future releases.`
 
 The package is dependent on `nepali-datetime <https://github.com/dxillar/nepali-datetime>`_ package and the UI for the date picker is implemented from https://github.com/leapfrogtechnology/nepali-date-picker.
 
