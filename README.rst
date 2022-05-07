@@ -2,11 +2,12 @@
 Nepali DateTime Field
 =====================
 
-Highly motivated package from Django's DateField & DateTimeField.
+Highly motivated package from Django's DateField & DateTimeField. The library is intended to provide
+Bikram Sambat Date Time fields for both Models and Forms.
 
-*Note: Currently only supports DateField. DateTimeField will be supported in future releases.*
+*Note: Currently only supports DateField. DateTimeField will be supported soon in future releases.*
 
-The package is dependent on `nepali-datetime <https://github.com/dxillar/nepali-datetime>`_ package & the UI for the date picker is forked from https://github.com/leapfrogtechnology/nepali-date-picker.
+The package is dependent on `nepali-datetime <https://github.com/dxillar/nepali-datetime>`_ package and the UI for the date picker is implemented from https://github.com/leapfrogtechnology/nepali-date-picker.
 
 **Supports: Django 2.0+**
 
@@ -43,15 +44,19 @@ Quick start
         ...
         nepali_date = NepaliDateField()
 
-4. Whenever using ``NepaliDateField`` form field, add the static file by: ``{% static 'nepali_datetime_field/init.js' %}`` in the html template to load the date picker UI::
+4. Whenever using ``NepaliDateField`` form field, don't forget to add Widget's media on the `<head>` section of the html as below::
     
     <html>
-    {% load static %}
+    <head>
     ...
+    {{ form.media }}
+    ...
+    </head>
     <body>
     ...
+    {{ form }}
+    ...
     </body>
-    {% static 'nepali_datetime_field/init.js' %}
     </html>
 
 5. Querying the model field::
@@ -79,4 +84,4 @@ Check some of the usage details in `example_app/tests.py <https://github.com/dxi
 
 Demo
 ----
-Demo of the ``example_app`` deployed `here <https://nepali-datetime-field.herokuapp.com/example/create>`__.
+Play around with the live demo `here <https://nepali-datetime-field.herokuapp.com/example/create>`__.

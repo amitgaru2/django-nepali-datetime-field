@@ -8,6 +8,16 @@ class NepaliDateInput(forms.DateInput):
     input_type = 'nepali-date'
     template_name = 'nepali_datetime_field/forms/widgets/nepali_date.html'
 
+    class Media:
+        css = {
+            'all': ('https://unpkg.com/nepali-date-picker@2.0.1/dist/nepaliDatePicker.min.css',)
+        }
+        js = (
+            'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+            'https://unpkg.com/nepali-date-picker@2.0.1/dist/jquery.nepaliDatePicker.min.js',
+            'nepali_datetime_field/init.js',
+        )
+
     def get_context(self, name, value, attrs):
         if isinstance(value, str):
             try:
