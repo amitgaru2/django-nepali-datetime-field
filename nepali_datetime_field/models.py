@@ -33,13 +33,19 @@ class NepaliDateField(models.DateField):
 
     def get_prep_value(self, value):
         value = super().get_prep_value(value)
-        return self.to_python(value).to_datetime_date()
+        value = self.to_python(value)
+        if value is not None:
+            value = value.to_datetime_date()
+        return value
 
     def to_python(self, value):
+        super().to_python()
         if value is None:
             return value
+
         if isinstance(value, nepali_datetime.date):
             return value
+
         try:
             parsed = parse_date(value)
             if parsed is not None:
