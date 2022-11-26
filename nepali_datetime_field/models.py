@@ -39,7 +39,6 @@ class NepaliDateField(models.DateField):
         return value
 
     def to_python(self, value):
-        super().to_python()
         if value is None:
             return value
 
