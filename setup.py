@@ -38,7 +38,7 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
     include_package_data=True,
-    packages=find_packages(exclude=("example_app")),
+    packages=find_packages(exclude=("example_app", "example_app.*")),
     python_requires=">=3.6",
     install_requires=["Django >= 2.0", "nepali_datetime"],
 )
