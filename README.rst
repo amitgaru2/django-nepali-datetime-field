@@ -7,7 +7,7 @@ Bikram Sambat Date Time fields for Django's Model and Form.
 
 :code:`Note: Currently only supports DateField. DateTimeField will be supported soon in future releases.`
 
-The package is dependent on `nepali-datetime <https://github.com/dxillar/nepali-datetime>`_ package and the UI for the date picker is implemented from https://github.com/leapfrogtechnology/nepali-date-picker.
+The package is dependent on `nepali-datetime <https://github.com/amitgaru2/nepali-datetime>`_ package and the UI for the date picker is implemented from https://github.com/leapfrogtechnology/nepali-date-picker.
 
 **Supports: Django 2.0+**
 
