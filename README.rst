@@ -79,7 +79,7 @@ Quick start
 
 More Usage
 ----------
-Check some of the usage details in `example_app/tests.py <https://github.com/dxillar/django-nepali-datetime-field/blob/main/example_app/tests.py>`__.
+Check some of the usage details in `example_app/tests.py <https://github.com/amitgaru2/django-nepali-datetime-field/blob/main/example_app/tests.py>`__.
 
 
 Demo
