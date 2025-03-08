@@ -14,7 +14,7 @@ class NepaliDateInput(forms.DateInput):
         }
         js = (
             'https://code.jquery.com/jquery-3.5.1.slim.min.js',
-            'https://unpkg.com/nepali-date-picker@2.0.2/dist/jquery.nepaliDatePicker.min.js',
+            'https://unpkg.com/nepali-date-picker@2.0.2/dist/nepaliDatePicker.min.js',
             'nepali_datetime_field/init.js',
         )
 
