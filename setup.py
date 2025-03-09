@@ -13,7 +13,7 @@ setup(
     long_description_content_type="text/x-rst",
     author=__author__,
     author_email="amitgaru2@gmail.com",
-    url="https://github.com/dxillar/django-nepali-datetime-field",
+    url="https://github.com/amitgaru2/django-nepali-datetime-field",
     license="MIT",
     classifiers=[
         "Environment :: Web Environment",
@@ -28,6 +28,8 @@ setup(
         "Framework :: Django :: 4.0",
         "Framework :: Django :: 4.1",
         "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.0",
+        "Framework :: Django :: 5.1",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
