@@ -10,11 +10,11 @@ class NepaliDateInput(forms.DateInput):
 
     class Media:
         css = {
-            'all': ('https://unpkg.com/nepali-date-picker@2.0.1/dist/nepaliDatePicker.min.css',)
+            'all': ('https://unpkg.com/nepali-date-picker@2.0.2/dist/nepaliDatePicker.min.css',)
         }
         js = (
             'https://code.jquery.com/jquery-3.5.1.slim.min.js',
-            'https://unpkg.com/nepali-date-picker@2.0.1/dist/jquery.nepaliDatePicker.min.js',
+            'https://unpkg.com/nepali-date-picker@2.0.2/dist/nepaliDatePicker.min.js',
             'nepali_datetime_field/init.js',
         )
 
