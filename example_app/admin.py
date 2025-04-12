@@ -17,5 +17,5 @@ class ExampleModelForm(forms.ModelForm):
 
 # Register your models here.
 @admin.register(ExampleModel)
-class MyModelAdmin(admin.ModelAdmin):
+class ExampleModelAdmin(admin.ModelAdmin):
     form = ExampleModelForm
