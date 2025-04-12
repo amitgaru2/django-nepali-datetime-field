@@ -77,6 +77,30 @@ Quick start
     YourModel.objects.filter(nepali_date__range=(from_date, to_date))
 
 
+Quick start for Admin site integration
+--------------------------------------
+
+1. Create your custom model form that has explicitly set the ``NepaliDateField`` model field to the ``NepaliDateField`` form field from the library::
+
+    from nepali_datetime_field.forms import NepaliDateField
+    
+    from example_app.models import ExampleModel
+    
+    
+    class ExampleModelForm(forms.ModelForm):
+        nepali_date = NepaliDateField()
+    
+        class Meta:
+            model = ExampleModel
+            fields = '__all__'
+
+2. Now use this form in your ``ModelAdmin`` class::
+
+    @admin.register(ExampleModel)
+    class ExampleModelAdmin(admin.ModelAdmin):
+        form = ExampleModelForm
+
+
 More Usage
 ----------
 Check some of the usage details in `example_app/tests.py <https://github.com/amitgaru2/django-nepali-datetime-field/blob/main/example_app/tests.py>`__.
