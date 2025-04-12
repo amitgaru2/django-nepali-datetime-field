@@ -101,6 +101,8 @@ Quick start for Admin site integration
         form = ExampleModelForm
 
 
+Check the `example_app <example_app/>`__ for the quick start implementation.
+
 More Usage
 ----------
 Check some of the usage details in `example_app/tests.py <https://github.com/amitgaru2/django-nepali-datetime-field/blob/main/example_app/tests.py>`__.
